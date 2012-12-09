@@ -1,4 +1,4 @@
-# tea-error
+# tea-error [![Build Status](https://secure.travis-ci.org/qualiancy/tea-error.png?branch=master)](https://travis-ci.org/qualiancy/tea-error)
 
 > Custom error constructor factory.
 
