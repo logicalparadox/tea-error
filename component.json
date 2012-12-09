@@ -1,0 +1,15 @@
+{
+    "name": "tea-error"
+  , "repo": "qualiancy/tea-error"
+  , "version": "0.0.0"
+  , "description": "Custom error constructor factory."
+  , "license": "MIT"
+  , "keywords": [
+    ]
+  , "main": "lib/error.js"
+  , "scripts": [
+        "lib/error.js"
+    ]
+  , "dependencies": {}
+  , "development": {}
+}
