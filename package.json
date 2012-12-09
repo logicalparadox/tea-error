@@ -18,6 +18,7 @@
       "test": "make test"
     }
   , "dependencies": {
+        "tea-extend": "0.2.0"
     }
   , "devDependencies": {
         "chai": "*"

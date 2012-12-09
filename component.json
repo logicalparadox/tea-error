@@ -10,6 +10,8 @@
   , "scripts": [
         "lib/error.js"
     ]
-  , "dependencies": {}
+  , "dependencies": {
+        "qualiancy/tea-extend": "0.2.0"
+    }
   , "development": {}
 }
