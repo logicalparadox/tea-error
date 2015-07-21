@@ -1,3 +1,7 @@
+var chai = require('chai');
+var should = chai.should();
+
+var error = require('..');
 var TestError = error('TestError');
 
 describe('compatibility', function () {

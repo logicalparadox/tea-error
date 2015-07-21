@@ -1,20 +1,12 @@
-# tea-error [![Build Status](https://secure.travis-ci.org/qualiancy/tea-error.png?branch=master)](https://travis-ci.org/qualiancy/tea-error)
+# tea-error [![Build Status](https://secure.travis-ci.org/logicalparadox/tea-error.png?branch=master)](https://travis-ci.org/logicalparadox/tea-error)
 
 > Custom error constructor factory.
 
 ## Installation
 
-### Node.js
-
 `tea-error` is available on [npm](http://npmjs.org).
 
     $ npm install tea-error
-
-### Component
-
-`tea-error` is available as a [component](https://github.com/component/component).
-
-    $ component install qualiancy/tea-error
 
 ## Usage
 
@@ -29,10 +21,10 @@ of the type/name that is specified.
 
 ```js
 var error = require('tea-error')
-  , TestError = error('TestError')
-  , err = new TestError('My error message.');
+var TestError = error('TestError')
+var err = new TestError('My error message.')
 
-throw err;
+throw err
 ```
 
 An error created/thrown from the custom constructor
@@ -44,12 +36,12 @@ observes all of the expected Javascript behaviors of
 The constructed error is an instanceof an Error.
 
 ```js
-var err = new Error();
-  , myerr = new TestError()
+var err = new Error()
+var myerr = new TestError()
 
-err.should.be.instanceof(Error);
-myerr.should.be.instanceof(Error);
-myerr.should.be.isntanceof(TestError);
+err.should.be.instanceof(Error)
+myerr.should.be.instanceof(Error)
+myerr.should.be.isntanceof(TestError)
 ```
 
 ##### name
@@ -58,10 +50,10 @@ The `name` property is defined like other "native" errors.
 
 ```js
 var err = new ReferenceError()
-  , myerr = new TestError();
+var myerr = new TestError()
 
-err.should.have.property('name', 'ReferenceError');
-myerr.should.have.property('name', 'TestError');
+err.should.have.property('name', 'ReferenceError')
+myerr.should.have.property('name', 'TestError')
 ```
 
 ##### message
@@ -71,10 +63,10 @@ as the first argument during construction.
 
 ```js
 var err = new Error('Javascript error occurred')
-  , myerr = new TestError('Test error occurred');
+var myerr = new TestError('Test error occurred')
 
-err.should.have.property('message', 'Javascript error occurred');
-myerr.should.have.property('message', 'Test Error occurred');
+err.should.have.property('message', 'Javascript error occurred')
+myerr.should.have.property('message', 'Test Error occurred')
 ```
 
 ##### stack
@@ -85,14 +77,13 @@ documentation to see if this is supported.
 
 ```js
 var err = new Error()
-  , myerr = new TestError();
+var myerr = new TestError()
 
 if (Error.captureStackTrace) {
-  err.should.have.property('stack');
-  myerr.should.have.property('stack');
+  err.should.have.property('stack')
+  myerr.should.have.property('stack')
 }
 ```
-
 
 #### Construction
 
@@ -106,9 +97,9 @@ errors.
 
 ```js
 var TestError = require('tea-errors')('TestError')
-  , err = new TestError('that did not work right');
+var err = new TestError('that did not work right')
 
-throw err;
+throw err
 ```
 
 There are a number of additional arguments that can be
@@ -121,11 +112,11 @@ The second argument during construction can be an object
 of properties that will be merged onto the newly created error.
 
 ```js
-var err = new TestError('expected field value', { fields: [ 'username' ] });
+var err = new TestError('expected field value', { fields: [ 'username' ] })
 
 err.should.have.property('fields')
   .an('array')
-  .that.deep.equals([ 'username' ]);
+  .that.deep.equals([ 'username' ])
 ```
 
 Note that if the `name`, `message`, and `stack` properties are defined
@@ -143,7 +134,7 @@ for an api method.
 
 ```js
 // api.js
-var ApiError = require('tea-error')('ApiError');
+var ApiError = require('tea-error')('ApiError')
 
 exports.use = function (fn) {
   if ('function' !== typeof fn) {
@@ -151,11 +142,11 @@ exports.use = function (fn) {
   }
 
   // etc.
-};
+}
 
 // user.js
-var api = require('./api.js);
-api.use('a string?');
+var api = require('./api.js)
+api.use('a string?')
 ```
 
 In this scenario the first line of the error stack will reference
@@ -173,13 +164,13 @@ Convert this error into a serialized JSON object.
 
 ```js
 var err = new TestError('some message', { hello: 'universe' })
-  , json = err.toJSON();
+var json = err.toJSON();
 
 json.should.deep.equal({
-    name: 'TestError'
-  , message: 'some message'
-  , hello: 'universe'
-  , stack: '...'
+  name: 'TestError',
+  message: 'some message',
+  hello: 'universe',
+  stack: '...'
 });
 ```
 
