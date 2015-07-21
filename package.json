@@ -2,12 +2,12 @@
   "name": "tea-error",
   "version": "0.1.0",
   "description": "Custom error constructor factory.",
-  "author": "Jake Luer <jake@qualiancy.com> (http://qualiancy.com)",
+  "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
   "license": "MIT",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git@github.com:qualiancy/tea-error.git"
+    "url": "git@github.com:logicalparadox/tea-error.git"
   },
   "engines": {
     "node": "*"
