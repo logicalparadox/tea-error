@@ -1,29 +1,26 @@
 {
-    "name": "tea-error"
-  , "version": "0.1.0"
-  , "description": "Custom error constructor factory."
-  , "author": "Jake Luer <jake@qualiancy.com> (http://qualiancy.com)"
-  , "license": "MIT"
-  , "keywords": [
-    ]
-  , "repository": {
-        "type": "git"
-      , "url": "git@github.com:qualiancy/tea-error.git"
-    }
-  , "engines": {
-      "node": "*"
-    }
-  , "main": "./index"
-  , "scripts": {
-      "test": "make test"
-    }
-  , "dependencies": {
-        "tea-extend": "0.2.0"
-    }
-  , "devDependencies": {
-        "chai": "*"
-      , "component": "*"
-      , "mocha": "*"
-      , "mocha-phantomjs": "*"
-    }
+  "name": "tea-error",
+  "version": "0.1.0",
+  "description": "Custom error constructor factory.",
+  "author": "Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:logicalparadox/tea-error.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "params": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
 }
