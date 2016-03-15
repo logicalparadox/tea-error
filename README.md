@@ -41,7 +41,7 @@ var myerr = new TestError()
 
 err.should.be.instanceof(Error)
 myerr.should.be.instanceof(Error)
-myerr.should.be.isntanceof(TestError)
+myerr.should.be.instanceof(TestError)
 ```
 
 ##### name
